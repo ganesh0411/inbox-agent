@@ -3,3 +3,4 @@ credentials.json
 token.json
 .env
 __pycache__/.DS_Store
+data/
