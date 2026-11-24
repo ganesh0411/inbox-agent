@@ -1,0 +1,14 @@
+# Secrets must never enter the image
+.env
+token.json
+credentials.json
+
+# Local-only artifacts
+.venv
+__pycache__
+*.pyc
+.git
+.DS_Store
+data/
+web/node_modules
+web/dist
