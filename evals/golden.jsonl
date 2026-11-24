@@ -1,0 +1,25 @@
+{"id": "q01", "question": "What is the deadline for the Tacoma retrofit and what could put it at risk?", "relevant": ["Q1 warehouse automation budget - need your sign-off", "Re: Atlas selected - timeline risk"], "note": "The risk email never says Tacoma or retrofit - pure vector search misses it."}
+{"id": "q02", "question": "Which vendor did we pick for the conveyor work and why?", "relevant": ["Tacoma retrofit - vendor quotes compared", "Re: Atlas selected - timeline risk"]}
+{"id": "q03", "question": "What did Clarity Systems agree to on the liability cap?", "relevant": ["Re: Contract renewal - on the liability cap", "Clarity Systems contract - review notes"]}
+{"id": "q04", "question": "When does the Clarity contract expire and what are the pricing options?", "relevant": ["Re: Contract renewal - revised pricing"]}
+{"id": "q05", "question": "What caused the dispatch outage and has it been fixed?", "relevant": ["Incident 4471 - postmortem scheduled", "Routing service - monitoring improvements shipped", "Load test results - pool settings validated"]}
+{"id": "q06", "question": "Are there any open action items from the incident?", "relevant": ["Load test results - pool settings validated", "Routing service - monitoring improvements shipped"]}
+{"id": "q07", "question": "What is happening with the ops analyst hiring?", "relevant": ["Hiring update - two offers out", "Re: Ops Analyst offer - decision", "Devon declined - reopening the search"]}
+{"id": "q08", "question": "Why did we lose the second candidate?", "relevant": ["Re: Ops Analyst offer - decision", "Devon declined - reopening the search"]}
+{"id": "q09", "question": "What is the real cost of raising the analyst salary band?", "relevant": ["Re: Rachel's band increase request", "Devon declined - reopening the search"], "note": "Greg's email reframes a 10k ask as 130k."}
+{"id": "q10", "question": "When is Samira starting and where will she be based?", "relevant": ["Re: January 5 start confirmed - onboarding question", "Re: Offer - accepted, start date question"]}
+{"id": "q11", "question": "What changed about our dock slot at the port?", "relevant": ["Dock scheduling change for December", "Re: Dock scheduling - confirming Friday option"]}
+{"id": "q12", "question": "Which trucks are overdue for maintenance and what did we do about it?", "relevant": ["Fleet maintenance - three trucks overdue", "Unit 134 pulled - capacity impact"]}
+{"id": "q13", "question": "What did the sustainability audit find and what was recommended?", "relevant": ["Sustainability audit - preliminary findings", "Re: RECs vs onsite solar - my recommendation"]}
+{"id": "q14", "question": "Should we buy renewable energy certificates or install solar?", "relevant": ["Re: RECs vs onsite solar - my recommendation", "Sustainability audit - preliminary findings"]}
+{"id": "q15", "question": "What is Nina asking for and what did she revise it to?", "relevant": ["Capacity swap for the holidays?", "Re: Capacity swap - revised ask"]}
+{"id": "q16", "question": "What is our insurance renewal looking like?", "relevant": ["Insurance renewal - claims history review", "Re: Safety program docs received"]}
+{"id": "q17", "question": "When does Tomas want to meet and what does he want?", "relevant": ["Partnership proposal - Scandinavian corridor", "Re: Seattle meeting - December 9 or 10?"]}
+{"id": "q18", "question": "What is PacificLink asking us to confirm and by when?", "relevant": ["Re: Drayage capacity confirmation needed", "Transpacific volume forecast Q1"]}
+{"id": "q19", "question": "What compliance deadlines are coming up?", "relevant": ["Mandatory: MFA migration deadline December 5", "Forklift certification expiring - 8 staff"]}
+{"id": "q20", "question": "How did we do against budget in October?", "relevant": ["Budget variance - October close"]}
+{"id": "q21", "question": "Is the maintenance underspend real savings?", "relevant": ["Budget variance - October close", "Fleet maintenance - three trucks overdue"], "note": "Requires connecting two emails that share no vocabulary."}
+{"id": "q22", "question": "What is disrupting the Kent warehouse and when?", "relevant": ["Kent warehouse - roof repair scheduled"]}
+{"id": "q23", "question": "Have I been invited to speak anywhere?", "relevant": ["Speaker invitation - Logistics Northwest 2027"]}
+{"id": "q24", "question": "What research partnership was proposed?", "relevant": ["Research collaboration - warehouse ergonomics study"]}
+{"id": "q25", "question": "What do I need to sign off on this week?", "relevant": ["Q1 warehouse automation budget - need your sign-off", "Dock scheduling change for December"]}

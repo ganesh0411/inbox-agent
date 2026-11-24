@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 
 from zoneinfo import ZoneInfo
 
-from retrieve import search as vector_search
+from hybrid import search as hybrid_search
 
 TZ = ZoneInfo(os.environ.get("AGENT_TZ", "America/Los_Angeles"))
 INDEX_DB = os.environ.get("INDEX_DB", "data/index.db")
@@ -80,14 +80,14 @@ TOOLS = [
 # --- implementations ---------------------------------------------------------
 
 def search_email(query, k=6):
-    hits = vector_search(query, k=min(int(k or 6), 12), db=INDEX_DB)
+    hits = hybrid_search(query, k=min(int(k or 6), 12), db=INDEX_DB)
     if not hits:
         return "No matching email found."
     out = []
     for h in hits:
         body = " ".join(h["text"].split())[:700]
         out.append(
-            f"--- relevance {h['score']:.2f}\n"
+            f"--- relevance {h['score']:.3f}\n"
             f"Subject: {h['subject']}\nFrom: {h['sender']}\nDate: {h['date']}\n\n{body}"
         )
     return "\n\n".join(out)
