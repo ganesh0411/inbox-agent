@@ -3,8 +3,10 @@
 Each tool is two things: a JSON schema Claude sees (the only description it
 gets, so the wording matters), and a Python function that actually runs.
 """
+import json
 import os
 from datetime import datetime, timedelta
+from pathlib import Path
 
 from zoneinfo import ZoneInfo
 
@@ -12,6 +14,12 @@ from hybrid import search as hybrid_search
 
 TZ = ZoneInfo(os.environ.get("AGENT_TZ", "America/Los_Angeles"))
 INDEX_DB = os.environ.get("INDEX_DB", "data/index.db")
+
+# In demo mode the calendar is a seeded file, not the owner's real Google
+# Calendar. The deployed demo must never touch a real account.
+DEMO = os.environ.get("DEMO_MODE", "false").lower() == "true"
+DEMO_CALENDAR = Path(os.environ.get("DEMO_CALENDAR", "data/demo_calendar.json"))
+_demo_added = []   # events created during this process, not persisted
 
 
 def now():
@@ -93,7 +101,24 @@ def search_email(query, k=6):
     return "\n\n".join(out)
 
 
+def _demo_events():
+    stored = json.loads(DEMO_CALENDAR.read_text()) if DEMO_CALENDAR.exists() else []
+    return stored + _demo_added
+
+
 def check_calendar(start_date, end_date):
+    if DEMO:
+        lo = datetime.fromisoformat(start_date).replace(tzinfo=TZ)
+        hi = datetime.fromisoformat(end_date).replace(tzinfo=TZ) + timedelta(days=1)
+        hits = [
+            e for e in _demo_events()
+            if lo <= datetime.fromisoformat(e["start"]) < hi
+        ]
+        if not hits:
+            return f"No events between {start_date} and {end_date}."
+        hits.sort(key=lambda e: e["start"])
+        return "\n".join(f"{e['start']} to {e['end']}: {e['summary']}" for e in hits)
+
     from auth import get_calendar_service
 
     svc = get_calendar_service()
@@ -122,6 +147,15 @@ def check_calendar(start_date, end_date):
 
 
 def create_event(title, start, end, description=""):
+    if DEMO:
+        _demo_added.append({
+            "summary": title,
+            "start": datetime.fromisoformat(start).replace(tzinfo=TZ).isoformat(),
+            "end": datetime.fromisoformat(end).replace(tzinfo=TZ).isoformat(),
+        })
+        return (f"Created '{title}' from {start} to {end}. "
+                "(Demo calendar - this is not a real Google Calendar event.)")
+
     from auth import get_calendar_service
 
     svc = get_calendar_service()

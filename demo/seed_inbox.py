@@ -17,7 +17,7 @@ OUT = Path("data/demo_messages.jsonl")
 EMAILS = [
     (8, "Priya Raman", "priya.raman@northwind-log.com",
      "Q1 warehouse automation budget - need your sign-off",
-     "Alex,\n\nFinance came back on the automation proposal. They'll approve the conveyor retrofit at the Tacoma site but want the robotics pilot deferred to Q2.\n\nThe retrofit is approved at 340,000 dollars with a hard completion date of March 14. Anything past that date rolls into next fiscal year and we lose the capital allocation.\n\nI need your sign-off by Friday November 28 so procurement can issue the PO.\n\nPriya"),
+     "Alex,\n\nFinance came back on the automation proposal. They'll approve the conveyor retrofit at the Tacoma site but want the robotics pilot deferred to Q2.\n\nThe retrofit is approved at 340,000 dollars with a hard completion date of March 14. Anything past that date rolls into next fiscal year and we lose the capital allocation.\n\nI need your sign-off by Friday November 27 so procurement can issue the PO.\n\nPriya"),
 
     (10, "Marcus Webb", "mwebb@claritysystems.io",
      "Re: Contract renewal - revised pricing",
@@ -77,7 +77,7 @@ EMAILS = [
 
     (5, "Facilities", "facilities@northwind-log.com",
      "Kent warehouse - roof repair scheduled",
-     "Notice to all Kent warehouse staff.\n\nRoof repairs begin Monday December 1 and run approximately two weeks.\n\nBays 4 through 7 will be unavailable. Work happens 7am to 4pm weekdays. Expect noise.\n\nInventory in the affected bays must be relocated by Friday November 28.\n\nFacilities Team"),
+     "Notice to all Kent warehouse staff.\n\nRoof repairs begin Tuesday December 1 and run approximately two weeks.\n\nBays 4 through 7 will be unavailable. Work happens 7am to 4pm weekdays. Expect noise.\n\nInventory in the affected bays must be relocated by Friday November 27.\n\nFacilities Team"),
 
     (11, "Nina Brandt", "nina.brandt@cascade-freight.com",
      "Capacity swap for the holidays?",
