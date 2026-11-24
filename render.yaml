@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: agentic-ops-assistant
+    name: inbox-agent
     runtime: docker
     plan: free
     healthCheckPath: /api/health

@@ -28,7 +28,7 @@ os.environ.setdefault("DEMO_MODE", "true")
 
 import agent  # noqa: E402  - imported after INDEX_DB is set
 
-app = FastAPI(title="Agentic Ops Assistant")
+app = FastAPI(title="Inbox Agent")
 
 app.add_middleware(
     CORSMiddleware,

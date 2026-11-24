@@ -1,4 +1,4 @@
-# Agentic Ops Assistant
+# Inbox Agent
 
 Ask questions about a mailbox and calendar in plain language, and have the
 assistant act on them. It combines retrieval over indexed email with live tool

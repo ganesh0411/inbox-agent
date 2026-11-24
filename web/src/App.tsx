@@ -111,7 +111,7 @@ export default function App() {
   return (
     <div className="app">
       <header>
-        <h1>Agentic Ops Assistant</h1>
+        <h1>Inbox Agent</h1>
         <p>
           Ask about a seeded inbox and calendar. It searches email, checks
           availability, and can schedule.
