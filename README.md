@@ -5,7 +5,7 @@ assistant act on them. It combines retrieval over indexed email with live tool
 calls against a calendar, and ships with an evaluation harness that measures
 whether retrieval is actually finding the right messages.
 
-**[Live demo](#)** &nbsp;·&nbsp; runs on a seeded inbox, not a real mailbox.
+**[Live demo](https://inbox-agent-b7r2.onrender.com)** &nbsp;·&nbsp; runs on a seeded inbox, not a real mailbox. Free tier, so the first request may take ~50s to wake.
 
 ---
 
